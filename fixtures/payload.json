@@ -1,0 +1,117 @@
+{
+  "data": {
+    "type": "searchRequest",
+    "attributes": {
+      "direction": "outward"
+    },
+    "relationships": {
+      "connections":{
+    	"data":[
+    		{"type":"connection","id":"urn:trainline:connection:pao_sncf"},
+    		{"type":"connection","id":"urn:trainline:connection:db"},
+    		{"type":"connection","id":"urn:trainline:connection:benerail"},
+    		{"type":"connection","id":"urn:trainline:connection:trenitalia"},
+    		{"type":"connection","id":"urn:trainline:connection:renfe"}
+    	]
+      },
+      "passengerSpecifications": {
+        "data": [
+          {
+            "type": "passengerSpecification",
+            "id": "paxSpec-1"
+          },
+          {
+            "type": "passengerSpecification",
+            "id": "paxSpec-2"
+          }
+        ]
+      },
+      "outwardDefinition": {
+        "data": {
+          "type": "transitDefinition",
+          "id": "transitDef-123"
+        }
+      }
+    }
+  },
+  "included": [
+        {
+      "type": "passengerSpecification",
+      "id": "paxSpec-1",
+      "attributes": {
+        "firstName": "Luke",
+        "lastName": "Skywalker",
+        "name": null,
+        "dateOfBirthOnOrAfter": "1990-01-23",
+        "dateOfBirthBefore": "1990-01-24",
+        "gender": "male"
+      },
+      "relationships": {
+        "documents": {
+          "data": []
+        }
+      }
+    },
+    {
+      "type": "passengerSpecification",
+      "id": "paxSpec-2",
+      "attributes": {
+        "firstName": "Leia",
+        "lastName": "Solo",
+        "name": "Leia Organa Solo",
+        "dateOfBirthOnOrAfter": "1990-01-23",
+        "dateOfBirthBefore": "1990-01-24",
+        "gender": "female"
+      },
+      "relationships": {
+        "documents": {
+          "data": []
+        }
+      }
+    },
+    {
+      "type": "location",
+      "id": "86569e77ff41afd226eca1493abf58c3f6e73a6d",
+      "meta": {
+        "unresolved": true
+      },
+      "links": {
+        "self": "https://c30-traveldataapi.service.ttlnonprod.local/api/locations/86569e77ff41afd226eca1493abf58c3f6e73a6d"
+      }
+    },
+    {
+      "type": "location",
+      "id": "bd27339eadba1253c253603970000c5546224ec3",
+      "meta": {
+        "unresolved": true
+      },
+      "links": {
+        "self": "https://c30-traveldataapi.service.ttlnonprod.local/api/locations/bd27339eadba1253c253603970000c5546224ec3"
+      }
+    },
+    {
+      "type": "transitDefinition",
+      "id": "transitDef-123",
+      "attributes": {
+        "departAfter": "2018-10-12T11:50:50.377Z"
+      },
+      "relationships": {
+        "origin": {
+          "data": {
+            "type": "location",
+            "id": "86569e77ff41afd226eca1493abf58c3f6e73a6d"
+          }
+        },
+        "destination": {
+          "data": {
+            "type": "location",
+            "id": "bd27339eadba1253c253603970000c5546224ec3"
+          }
+        },
+        "waypoints": {
+          "data": []
+        }
+      }
+    }  
+  ]
+}

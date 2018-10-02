@@ -1,0 +1,10 @@
+#!/bin/bash
+
+export SQL_NAME='test_db'
+export SQL_USERNAME='postgres'
+export SQL_PASSWORD='postgres'
+export SQL_HOST='192.168.56.102'
+export SQL_PORT='5432'
+
+export ENABLE_DB_CONNECTION_VALIDATOR='disabled'
+# export DB_CONNECTION_VALIDATOR_TIMEOUT='1'
