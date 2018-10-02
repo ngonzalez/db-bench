@@ -13,6 +13,7 @@ puts "Found %s records" % records.length
 records.each do |record|
   uuid = SimpleUUID::UUID.new.to_guid
   record[:value] = "update-#{uuid}"
+  record.save
 end
 
 exit
